@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+
+}
+
+body {
+
+  overflow-x: hidden;
+
+}
+
+:root {
+
+  --primaryColor: #fff;
+  --secondaryColor: #9D7BB8;
+  --thirdColor: #71CEE3;
+  --maxWidth: 1200px;
+
+}
+
+.header {
+
+  position: fixed;
+  padding-inline: 20px;
+  top: 0;
+  left: 0;
+  width: 100vw;
+
+}
+
+section {
+  width: 100%;
+}
+
+section article {
+
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+
+
+}
+
+.header article {
+
+  display: flex;
+  flex-direction: row;
+  gap: 200px;
+  padding: 20px;
+
+}
+
+.home {
+
+  background-image: linear-gradient(to right, #1C1D20, #191D21, #2E1A23, #241A20);
+  background-color: #1a191d;
+  width: 100vw;
+  min-height: 100vh;
+
+}
+
+.home article {
+
+  background-image: url(./still-life-apple-fruit-creative-poster-cover-banner-wallpaper-background-design-art.jpg);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  max-width: 100%;
+  background-position: bottom;
+
+}
+
+.header-logo img {
+
+  width: 100%;
+  max-width: 200px;
+
+}
+
+.header-menu {
+
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+
+}
+
+.header-menu a {
+
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+
+}
+
+.header-menu p {
+
+  font-family: "Roboto Mono", monospace;
+    display: flex;
+  justify-content: flex-end;
+  font-size: 0.8rem;
+
+}
+
+.home-name {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+}
+
+.home-name .name {
+
+  font-size: 7rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+
+
+}
+
+.home-name .jobs {
+
+  font-size: 1.5rem;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 500;
+  letter-spacing: 2.2px;
+
+}
+
+.expertise article {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding-block: 50px;
+
+}
+
+.expertise article h2 {
+
+  font-size: 4rem;
+
+}
+
+.expertise-card{
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  padding-inline: 60px;
+  border: 2px solid #1a191d;
+ 
+  
+
+}
+
+.expertise-card >div{
+
+  border-left: 2px solid #1a191d;
+  padding: 40px 40px;
+  padding-bottom: 60px;
+  
+
+}
+
+.expertise-card >div:first-child{
+
+  border-left: none;
+
+}
+
+.expertise-card-content{
+
+  display: flex;
+  width: 100%;
+  max-width: 300px;
+  flex-direction: column;
+  gap: 40px;
+
+}
+
+.expertise .title {
+
+
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+
+}
+
+.expertise .title svg {
+
+  width: 42px;
+
+}
+
+.expertise .title>div {
+
+  display: flex;
+  flex-direction: column;
+  font-size: 26px;
+  font-weight: bold;
+
+}
+
+.expertise .title>div p:first-child{
+
+position: relative;
+width: fit-content;
+
+}
+
+.expertise .title>div p:first-child::after {
+
+  transition: all 0.1s ease-in-out;
+  content: "";
+  position: absolute;
+  bottom: 13.5%;
+  z-index: -1;
+  height: 0.3em;
+  width: 104%;
+
+  left: -1%;
+  background: linear-gradient(65deg, var(--c) 0%, var(--c) 100%, rgba(255, 209, 0, 0) 100%);
+}
+
+.expertise .content{
+
+  padding-left: 20px;
+  margin-left: 20px;
+  position: relative;
+  border-left: 2px solid #1a191d;
+
+}
+
+.expertise .content::before{
+
+  content: "<h3>";
+  position: absolute;
+  top: -25px;
+  left: -20px;
+
+}
+
+.expertise .content::after{
+
+  content: "</h3>";
+  position: absolute;
+  bottom: -25px;
+  left: -20px;
+
+}
+
+.expertise .content p{
+
+  font-family: "Roboto Mono", monospace;
+  color: #1a191d;
+  font-weight: 400;
+  line-height: 1.4em
+
+}
