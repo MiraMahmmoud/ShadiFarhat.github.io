@@ -41,7 +41,7 @@ section {
 }
 
 section article {
- 
+
   max-width: 1200px;
   width: 100%;
   margin-inline: auto;
@@ -105,7 +105,7 @@ section article {
 .header-menu p {
 
   font-family: "Roboto Mono", monospace;
-    display: flex;
+  display: flex;
   justify-content: flex-end;
   font-size: 0.8rem;
 
@@ -159,34 +159,34 @@ section article {
 
 }
 
-.expertise-card{
+.expertise-card {
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 50px;
   padding-inline: 60px;
   border: 2px solid #1a191d;
- 
-  
+
+
 
 }
 
-.expertise-card >div{
+.expertise-card>div {
 
   border-left: 2px solid #1a191d;
   padding: 40px 40px;
   padding-bottom: 60px;
-  
+
 
 }
 
-.expertise-card >div:first-child{
+.expertise-card>div:first-child {
 
   border-left: none;
 
 }
 
-.expertise-card-content{
+.expertise-card-content {
 
   display: flex;
   width: 100%;
@@ -220,10 +220,10 @@ section article {
 
 }
 
-.expertise .title>div p:first-child{
+.expertise .title>div p:first-child {
 
-position: relative;
-width: fit-content;
+  position: relative;
+  width: fit-content;
 
 }
 
@@ -241,7 +241,7 @@ width: fit-content;
   background: linear-gradient(65deg, var(--c) 0%, var(--c) 100%, rgba(255, 209, 0, 0) 100%);
 }
 
-.expertise .content{
+.expertise .content {
 
   padding-left: 20px;
   margin-left: 20px;
@@ -250,7 +250,7 @@ width: fit-content;
 
 }
 
-.expertise .content::before{
+.expertise .content::before {
 
   content: "<h3>";
   position: absolute;
@@ -259,7 +259,7 @@ width: fit-content;
 
 }
 
-.expertise .content::after{
+.expertise .content::after {
 
   content: "</h3>";
   position: absolute;
@@ -268,11 +268,273 @@ width: fit-content;
 
 }
 
-.expertise .content p{
+.expertise .content p {
 
   font-family: "Roboto Mono", monospace;
   color: #1a191d;
   font-weight: 400;
   line-height: 1.4em
+}
+
+.expertise .code-jpg {
+
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  top: -70px;
+  z-index: -1;
+  opacity: 50%;
 
 }
+
+.myWork article{
+
+  display: flex;
+  gap: 150px;
+
+
+}
+
+.myWork-title {
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 550px;
+  gap: 90px;
+
+}
+
+.myWork .mywork-title span{
+
+  font-size: 7rem;
+  font-weight: bold;
+  color: #191D21;
+  line-height: 120px;
+
+}
+
+.myWork .mywork-title p{
+
+  font-family: "Roboto Mono", monospace;
+  color: #1a191d;
+  font-weight: bold;
+  line-height: 1.5rem;
+  font-size: 1.3rem;
+
+}
+
+.myWork .myWork-Left{
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  top: -100px;
+  align-items: end;
+
+}
+
+.myWork .myWork-Left .phone{
+
+  width: 100%;
+  max-width: 320px;
+
+}
+
+.myWork .myWork-left-text{
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 550px;
+  gap: 20px;
+  position: relative;
+  top: -70px;
+  left: 60px;
+
+
+}
+
+.myWork .myWork-left-text img{
+
+  width: 100%;
+  max-width: 200px;
+
+}
+
+.myWork .myWork-left-text a{
+
+  text-decoration: none ;
+  padding: 15px;
+  background-color: #9c79b6;
+  font-size: 1.1rem;
+  width: fit-content;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+
+}
+
+.project{
+
+  background-color: #191D21;
+  padding-block: 50px;
+
+}
+
+.project article{
+
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+}
+
+.project .project-filter{
+
+  display: flex;
+  flex: row ;
+  gap: 40px;
+
+}
+
+.project .project-filter span,.project .project-filter button{
+
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+
+}
+
+.project .project-filter button{
+
+  background-color: transparent;
+  outline: none;
+  border:none;
+  color: white;
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+ 
+}
+
+.project .project-filter button sup{
+
+
+  position: relative;
+  top: -16px;
+  font-weight: 400;
+
+
+}
+
+.project .project-filter button::after{
+
+  content: "/";
+
+}
+
+.project .project-filter button:last-child:after{
+
+  content: none;
+
+}
+
+.project-cards {
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: stretch;
+  max-width: 800px;
+
+}
+
+.project-cards a{
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 2px;
+  overflow: hidden;
+  background-color:white;
+  text-decoration: none;
+  box-shadow: 0px 3px 5px #010202 ;
+  
+}
+
+.project-cards a .img{
+
+    height: 250px;
+    overflow: hidden;
+    width: 100%;
+    
+}
+
+.project-cards a .img img{
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .4s ease-in-out;
+
+}
+
+
+
+.project-cards a .desc{
+
+  padding: 20px;
+  display: flex ;
+  flex-direction: column;
+
+
+}
+
+.project-cards a .desc span{
+
+  color: #191D21;
+  font-weight: bold;
+  font-size: 1.6rem;
+
+}
+
+.project-cards a .desc p{
+
+  color: #191D21;
+  font-weight: bold;
+
+}
+
+
+.project-cards a:hover .img img{
+
+transform: scale(1.1);
+
+}
+
+.project-cards a.split{
+
+  max-width: 730px;
+
+}
+
+.project-cards a.split .img{
+
+  height: 400px;
+
+}
+
+.project-cards a.split .desc{
+
+  padding-bottom: 30px;
+
+}
+
+
+
+
+
