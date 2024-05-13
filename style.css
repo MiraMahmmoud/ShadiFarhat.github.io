@@ -719,6 +719,7 @@ font-size: 4rem;
   display: flex;
   flex-direction: column;
   gap: 80px;
+  padding-block: 50px;
 
 }
 
@@ -756,7 +757,11 @@ font-size: 4rem;
 
 
 }
+.freelance article{
 
+padding-block: 0;
+align-items: stretch;
+}
 .freelance article .freelance-left .social .email{
 
   text-decoration: none;
@@ -789,8 +794,9 @@ font-size: 1.4rem;
 
 .freelance article .freelance-right{
 
-  display: flex;
-
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
 
 }
 
@@ -799,6 +805,80 @@ font-size: 1.4rem;
   width: 40px;
 
 }
+
+.freelance article .first{
+
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  background-color: #9203ff;
+  padding: 20px;
+  
+
+}
+
+.freelance article .first-title{
+
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 30px;
+ 
+
+
+}
+
+.freelance article .first-title .img{
+
+  width: 100%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 50%;
+  max-width: 80px;
+
+
+}
+.freelance article .first-title .img img{
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.freelance article .first .text-p{
+
+  color: white;
+
+}
+
+.freelance article .first .text-span{
+
+  color: white;
+  font-weight: bold;
+
+}
+    
+
+
+.freelance article .text{
+
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  padding: 20px;
+  background-color: #71CEE3;
+  width: 100%;
+  height: 100%;
+
+
+}
+
+
+
+
+
 
 
 
