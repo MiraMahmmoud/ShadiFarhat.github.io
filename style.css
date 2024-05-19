@@ -21,16 +21,6 @@ body {
   display: none;
 }
 
-.work-desc {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s, opacity 0.5s ease;
-}
-
-.work-desc.visible {
-  visibility: visible;
-  opacity: 1;
-}
 
 
 
@@ -81,13 +71,12 @@ section article {
   width: 100%;
   margin-inline: auto;
   display: flex;
-
-
+  overflow: hidden;
+  padding-inline: 20px;
 
 }
 
 .header {
-
   position: fixed;
   padding-inline: 20px;
   top: 0;
@@ -117,6 +106,7 @@ section article {
 
 }
 
+
 .header-menu a {
 
   color: white;
@@ -124,11 +114,35 @@ section article {
   text-decoration: none;
   transition: 0.4s;
 
+}
+
+.header-menu a P{
+
+  color: white;
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: 0.4s;
 
 }
 
-.header-menu a:hover {
-  color: #5a5b5c;
+.header-menu a span{
+
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: 0.4s;
+ 
+ }
+
+.header-menu a span:hover{
+
+color: #b275e0;
+
+}
+
+.home-header-piece{
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -144,8 +158,10 @@ section article {
 
 .header-menu {
 
-  display: flex;
+  display: none;
   flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
   gap: 60px;
 
 }
@@ -188,9 +204,6 @@ section article {
   transition: opacity 0.3s;
 }
 
-.home-piece.fade {
-  opacity: 0.5;
-}
 
 
 .header-menu p {
@@ -210,12 +223,12 @@ section article {
   justify-content: center;
   width: 100%;
   z-index: 10;
-
+  text-align: center;
 }
 
 .home-name .name {
 
-  font-size: 7rem;
+  font-size: 4rem;
   font-weight: bold;
   color: white;
   text-transform: uppercase;
@@ -247,34 +260,33 @@ section article {
 
 .expertise article h2 {
 
-  font-size: 4rem;
+  font-size: 3rem;
 
 }
 
 .expertise-card {
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 50px;
-  padding-inline: 60px;
+  grid-template-columns: 1fr ;
+ column-gap: 50px;
   border: 2px solid #1a191d;
-
-
+  width: 100%;
+  overflow: hidden;
 
 }
 
 .expertise-card>div {
 
-  border-left: 2px solid #1a191d;
+  border-bottom: 2px solid #1a191d;
   padding: 40px 40px;
-  padding-bottom: 60px;
+  padding-top: 40px;
 
 
 }
 
 .expertise-card>div:first-child {
 
-  border-left: none;
+  border-top: none;
 
 }
 
@@ -282,7 +294,6 @@ section article {
 
   display: flex;
   width: 100%;
-  max-width: 300px;
   flex-direction: column;
   gap: 40px;
 
@@ -292,7 +303,8 @@ section article {
 
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+
   gap: 30px;
 
 }
@@ -382,6 +394,7 @@ section article {
 .myWork article {
 
   display: flex;
+  flex-wrap: wrap;
   gap: 150px;
 
 
@@ -393,16 +406,16 @@ section article {
   flex-direction: column;
   width: 100%;
   max-width: 550px;
-  gap: 90px;
+  gap: 30px;
 
 }
 
 .myWork .mywork-title span {
 
-  font-size: 7rem;
+  font-size: 4rem;
   font-weight: bold;
   color: #191D21;
-  line-height: 120px;
+  line-height: 60px;
 
 }
 
@@ -412,7 +425,7 @@ section article {
   color: #1a191d;
   font-weight: bold;
   line-height: 1.5rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
 
 }
 
@@ -488,16 +501,15 @@ section article {
 
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 50px ;
 
 }
 
 .project .project-filter {
 
   display: flex;
-  flex: row;
-  gap: 40px;
-
+  gap: 30px 40px;
+  flex-direction: column;
 }
 
 .project .project-filter span,
@@ -505,7 +517,7 @@ section article {
 
   color: #fff;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1rem;
 
 }
 
@@ -531,11 +543,7 @@ section article {
 
 }
 
-.project .project-filter button::after {
 
-  content: "/";
-
-}
 
 .project .project-filter button:last-child:after {
 
@@ -558,14 +566,15 @@ section article {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 350px;
   border-radius: 2px;
   overflow: hidden;
-  background-color: white;
+  background-color: #191D21;
   text-decoration: none;
   box-shadow: 0px 3px 5px #010202;
 
 }
+
+
 
 .project-cards a .img {
 
@@ -595,9 +604,37 @@ section article {
 
 }
 
+.project-cards a .desc .type{
+
+  transition: 0.4s ease-in-out;
+
+}
+
+.project-cards a .desc .type:last-child{
+
+  opacity: 0;
+  transform: translateY(20px);
+
+}
+
+.project-cards a:hover .desc .type{
+
+  opacity: 0;
+  transform: translateY(-20px);
+
+}
+.project-cards a:hover .desc .type:last-child{
+
+  opacity: 1;
+  transform: translateY(-20px);
+
+}
+
+
+
 .project-cards a .desc span {
 
-  color: #191D21;
+  color: white;
   font-weight: bold;
   font-size: 1.6rem;
 
@@ -605,7 +642,7 @@ section article {
 
 .project-cards a .desc p {
 
-  color: #191D21;
+  color: #9b9696;
   font-weight: bold;
 
 }
@@ -659,7 +696,7 @@ section article {
 
   color: white;
   text-align: center;
-  font-size: 4rem;
+  font-size: 2.5rem;
 
 }
 
@@ -688,7 +725,7 @@ section article {
 
   display: flex;
   flex-direction: row;
-  gap: 100px;
+  gap: 20px 100px;
   color: white;
   padding: 20px;
   background-color: #9203ff;
@@ -698,7 +735,7 @@ section article {
   justify-content: space-between;
   user-select: none;
   cursor: pointer;
-
+  flex-wrap: wrap;
 }
 
 .experience article .work-title div {
@@ -710,8 +747,12 @@ section article {
 }
 
 .experience article .work-title div span {
-
+  display: none;
   font-size: 1.3rem;
+
+}
+.experience article .work-title div .min{
+  display: flex;
 
 }
 
@@ -722,8 +763,23 @@ section article {
   width: 100%;
   display: flex;
   gap: 50px;
+  transition: all .3s ease-in-out;
+ display: none;
+ flex-wrap: wrap;
 
 }
+.experience article ._open div .min {
+  display: none;
+}
+
+.experience article ._open div span:last-child {
+  display: flex;
+}
+.experience article .work:has(._open) .work-desc{
+  display: flex;
+  
+}
+
 
 .experience article .work-desc-parg {
 
@@ -738,7 +794,7 @@ section article {
   display: flex;
   flex-direction: row;
   gap: 30px;
-
+  flex-wrap: wrap;
 }
 
 .experience .location span {
@@ -772,6 +828,7 @@ section article {
   color: rgba(255, 255, 255, .75);
   font-weight: bold;
   gap: 15px;
+  flex-wrap: wrap;
 
 }
 
@@ -800,7 +857,7 @@ section article {
 .freelance {
 
   background-color: #0a0e0e;
-
+  padding-bottom: 50px;
 }
 
 .freelance article {
@@ -808,9 +865,9 @@ section article {
   display: flex;
   flex-direction: row;
   padding: 70px;
-  gap: 150px;
-
-
+  gap: 40px 150px;
+  flex-wrap: wrap;
+  padding-inline: 0;
 }
 
 
@@ -818,9 +875,9 @@ section article {
 
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 30px 80px;
   padding-block: 50px;
-
+  padding-inline: 20px;  
 }
 
 .freelance article .left-title {
@@ -876,7 +933,7 @@ section article {
   color: white;
   font-weight: bold;
   font-family: "Roboto Mono", monospace;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   z-index: 10;
   position: relative;
 
@@ -919,7 +976,7 @@ section article {
 .freelance article .freelance-right {
 
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   width: 100%;
 
 }
@@ -1050,5 +1107,135 @@ section article {
 
   color: white;
   font-weight: bold;
+
+}
+
+@media only screen and (min-width: 700px) {
+.project .project-filter span,
+.project .project-filter button {
+
+  font-size: 1.1rem;
+
+}
+
+  .project .project-filter {
+    flex-direction: row;
+  }
+  
+
+  .project .project-filter button::after {
+
+    content: "/";
+  
+  }
+  
+  .freelance article .freelance-left .social .email span {
+
+    font-size: 1.4rem;
+  
+  }
+
+  
+}
+
+@media only screen and (min-width: 800px) {
+  .expertise article h2 {
+    font-size: 4rem;
+  }
+  .expertise-card {
+
+    padding-inline: 60px;
+  
+  }
+
+  .myWork-title {
+
+    gap: 90px;
+  
+  }
+  .project-cards a {
+
+    max-width: 350px;
+  
+  }
+  .myWork .mywork-title span {
+  
+    font-size: 7rem;
+    line-height: 120px;
+  
+  }
+  
+  .myWork .mywork-title p {
+    font-size: 1.3rem;
+  
+  }
+ 
+  
+}
+
+@media only screen and (min-width: 1100px) {
+  .header-menu {
+
+    display: flex;
+  
+  }
+  
+
+  .home-name .name {
+
+    font-size: 7rem;
+  
+  }
+  .experience article h2 {
+
+    font-size: 4rem;
+  
+  }
+  
+
+  .expertise-card {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .myWork article {
+    flex-wrap: nowrap;
+  }
+  .freelance{
+    padding-bottom: 0;
+  }
+  .freelance article{
+    flex-wrap: nowrap;
+  }
+  
+  .freelance article .freelance-right {
+
+    grid-template-columns: 1fr 1fr;
+  
+  }
+  
+  .expertise-card-content {
+
+   max-width: 300px;
+  
+  }
+
+  .expertise-card>div {
+
+ 
+    border-left: 2px solid #1a191d;
+    border-top: none;
+  
+  }
+  
+  .expertise-card>div:first-child {
+  
+    border-left: none;
+    border-top: none;
+  }
+  .expertise .title {
+
+    flex-direction: row;
+  }
+  
 
 }
